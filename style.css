@@ -1,0 +1,487 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+    --green: #588157;
+    --sage: #A3B18A;
+    --light: #DAD7CD;
+    --cream: #F5F3EB;
+    --dark: #344E41;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--dark);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* OPENING SCREEN */
+
+.opening {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: var(--green);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--cream);
+    padding: 25px;
+    transition: opacity 1s ease;
+}
+
+.envelope img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    animation: float 2s infinite ease-in-out;
+}
+
+.opening h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin: 12px 0;
+}
+
+.opening p {
+    margin: 7px 0;
+}
+
+.small-text {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+button {
+    margin-top: 30px;
+    padding: 14px 35px;
+    background: var(--cream);
+    color: var(--green);
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: white;
+}
+
+/* HEADER */
+
+header {
+    min-height: 420px;
+    background: var(--green);
+    color: var(--cream);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(35px, 6vw, 65px);
+    margin: 20px 0;
+}
+
+header p {
+    max-width: 500px;
+    line-height: 1.8;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--sage);
+    font-weight: 600;
+}
+
+header .eyebrow {
+    color: var(--light);
+}
+
+.decor {
+    font-size: 45px;
+    margin-top: 25px;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 85px 25px;
+    text-align: center;
+}
+
+section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 40px);
+    margin: 15px 0;
+}
+
+.description {
+    color: #777;
+    margin: 12px 0 35px;
+}
+
+/* INTRO */
+
+.intro {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.9;
+}
+
+.intro > p:last-child {
+    max-width: 550px;
+    margin: 20px auto;
+}
+
+/* GALLERY */
+
+.memories {
+    background: #E8E9DF;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1050px;
+    margin: 40px auto 0;
+}
+
+.polaroid {
+    width: 220px;
+    padding: 12px 12px 25px;
+    background: white;
+    box-shadow: 0 8px 20px #344e4120;
+    transform: rotate(-3deg);
+    transition: .4s;
+}
+
+.polaroid:nth-child(even) {
+    transform: rotate(3deg);
+}
+
+.polaroid:hover {
+    transform: rotate(0) translateY(-10px);
+}
+
+.polaroid img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.polaroid p {
+    font-family: 'Playfair Display', serif;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+/* VIDEO */
+
+.video-container {
+    max-width: 700px;
+    margin: 30px auto;
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px #344e4120;
+}
+
+video {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+/* FIRST LETTER */
+
+.letter-section {
+    background: #DAD7CD;
+}
+
+.letter {
+    max-width: 650px;
+    margin: 35px auto 0;
+    background: var(--cream);
+    padding: 45px;
+    text-align: left;
+    line-height: 2;
+    border-radius: 5px;
+    box-shadow: 0 10px 25px #344e4115;
+}
+
+.letter p {
+    margin-bottom: 18px;
+}
+
+.signature {
+    font-family: 'Playfair Display', serif;
+    color: var(--green);
+    font-size: 19px;
+    margin-top: 30px;
+}
+
+/* SECOND LETTER SECTION */
+
+.second-letter-section {
+    background: var(--cream);
+    overflow: hidden;
+}
+
+.envelope-wrapper {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    margin: 50px auto 20px;
+    perspective: 1000px;
+}
+
+/* ENVELOPE */
+
+.animated-envelope {
+    position: absolute;
+    width: 100%;
+    height: 180px;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    transition: transform 1s ease;
+}
+
+.envelope-back {
+    position: absolute;
+    inset: 0;
+    background: #A3B18A;
+    border-radius: 5px;
+}
+
+.envelope-front {
+    position: absolute;
+    inset: 0;
+    background: #879B73;
+    clip-path: polygon(0 0, 50% 55%, 100% 0, 100% 100%, 0 100%);
+    border-radius: 5px;
+    z-index: 3;
+}
+
+.envelope-flap {
+    position: absolute;
+    inset: 0;
+    background: #B7C4A3;
+    clip-path: polygon(0 0, 100% 0, 50% 58%);
+    transform-origin: top;
+    transition: transform .8s ease;
+    z-index: 4;
+}
+
+.envelope-heart {
+    position: absolute;
+    z-index: 5;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 38px;
+    color: var(--cream);
+    transition: opacity .3s;
+}
+
+/* LETTER INSIDE ENVELOPE */
+
+.letter-inside {
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    left: 0;
+    bottom: 20px;
+    background: #fffef8;
+    padding: 25px;
+    border-radius: 8px;
+    overflow-y: auto;
+    opacity: 0;
+    z-index: 1;
+    transform: translateY(0);
+    transition: all 1s ease;
+    box-shadow: 0 5px 20px #344e4120;
+}
+
+.second-letter-content {
+    text-align: left;
+    line-height: 1.9;
+}
+
+.second-letter-content p {
+    margin-bottom: 18px;
+}
+
+.letter-heading {
+    font-family: 'Playfair Display', serif;
+    color: var(--green);
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* OPEN ENVELOPE */
+
+.envelope-wrapper.open .letter-inside {
+    opacity: 1;
+    z-index: 5;
+    transform: translateY(-100px);
+}
+
+.envelope-wrapper.open .animated-envelope {
+    transform: translateY(180px);
+}
+
+.envelope-wrapper.open .envelope-flap {
+    transform: rotateX(180deg);
+    z-index: 0;
+}
+
+.envelope-wrapper.open .envelope-heart {
+    opacity: 0;
+}
+
+/* CLOSE ENVELOPE */
+
+.envelope-wrapper:not(.open) .letter-inside {
+    opacity: 0;
+    z-index: 1;
+    transform: translateY(0);
+}
+
+.envelope-wrapper:not(.open) .animated-envelope {
+    transform: translateY(0);
+}
+
+.envelope-wrapper:not(.open) .envelope-flap {
+    transform: rotateX(0deg);
+}
+
+.envelope-wrapper:not(.open) .envelope-heart {
+    opacity: 1;
+}
+
+/* ENVELOPE BUTTON */
+
+.envelope-button {
+    display: block;
+    position: relative;
+    z-index: 10;
+    margin: 20px auto;
+    background: var(--green);
+    color: var(--cream);
+}
+
+.envelope-button:hover {
+    background: var(--dark);
+    color: white;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--green);
+    color: var(--cream);
+    text-align: center;
+    padding: 65px 20px;
+}
+
+footer h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(25px, 4vw, 38px);
+    margin: 15px 0;
+}
+
+.footer-heart {
+    font-size: 45px;
+}
+
+.footer-small {
+    margin-top: 30px;
+    font-size: 12px;
+    color: var(--light);
+}
+
+/* FLOATING HEARTS */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    z-index: 50;
+    pointer-events: none;
+    color: var(--green);
+    animation: rise 6s linear forwards;
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .opening h1 {
+        font-size: 34px;
+    }
+
+    section {
+        padding: 65px 18px;
+    }
+
+    .polaroid {
+        width: 75%;
+        max-width: 260px;
+    }
+
+    .letter {
+        padding: 25px;
+    }
+
+    header {
+        min-height: 350px;
+    }
+
+    .envelope-wrapper {
+        width: 260px;
+        height: 480px;
+    }
+
+    .letter-inside {
+        padding: 20px;
+    }
+}

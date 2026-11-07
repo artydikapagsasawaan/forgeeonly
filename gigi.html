@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teerak</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Opening Screen -->
+    <div class="opening" id="opening">
+        <div class="envelope">
+            <img src="ehey.png" alt="Cute sticker">
+        </div>
+
+        <p class="small-text">Just The Two Of us</p>
+        <h1>Hey, Geebae! ♡</h1>
+        <p>I made this little place just for you.</p>
+        <button onclick="openWebsite()">Open Me HEHEHE</button>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="music" loop>
+        <source src="Someday.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Main Website -->
+    <main id="main">
+
+        <header>
+            <p class="eyebrow">Just The Two Of Us</p>
+            <h1>For My Favorite Person :33 </h1>
+            <p>Some memories, little moments, and a whole lot of love.</p>
+            <span class="decor">♡</span>
+        </header>
+
+        <!-- Introduction -->
+        <section class="intro">
+            <p class="eyebrow">OUR LITOL STORY</p>
+            <h2>I'm glad it's you</h2>
+            <p>
+                Out of all the people I could've crossed paths with, 
+                I'm glad life led me to you. Here's a little collection of our memories, 
+                the little moments, and everything that makes having you in my life so special.
+            </p>
+        </section>
+
+        <!-- Photo Gallery -->
+        <section class="memories">
+            <p class="eyebrow">CAPTURED MOMENTS</p>
+            <h2>Our Little Memories 📷</h2>
+            <p class="description">A few moments I wish I could keep forever.</p>
+
+            <div class="gallery">
+                <div class="polaroid">
+                    <img src="yie.jpg" alt="Our memory">
+                </div>
+
+                <div class="polaroid">
+                    <img src="ehe.jpg" alt="Our memory">
+                </div>
+
+                <div class="polaroid">
+                    <img src="jie.jpg" alt="Our memory">
+                </div>
+
+                <div class="polaroid">
+                    <img src="lel.jpg" alt="Our memory">
+                </div>
+            </div>
+        </section>
+
+        <!-- Video -->
+        <section class="video-section">
+            <p class="eyebrow">A MOMENT ON REPLAY</p>
+            <h2>Moving Memories 🎥</h2>
+            <p class="description">Because some moments deserve to be replayed.</p>
+
+            <div class="video-container">
+                <video autoplay muted loop playsinline>
+                    <source src="cutie.mp4" type="video/mp4">
+                    Your browser does not support this video.
+                </video>
+            </div>
+        </section>
+
+        <!-- First Letter -->
+        <section class="letter-section">
+            <p class="eyebrow">A LETTER FOR YOU</p>
+            <h2>To My Geaaa ♡</h2>
+
+            <div class="letter">
+                <p>Dear geeeeee,</p>
+
+                <p>
+                 I hope you know how lucky and thankful i am that i have met you,i never thought we would get to this point, 
+                 but it was so unexpected, you make me feel loved, and seen. i see and appreciate all of your love and effort, 
+                things have gotten better, you always make me smile, especially when im feeling fown, you always keep me happy, 
+                 thankyou for existing geee:>> I promise you that I will always try my best to be better for you.
+                I want to give you the love that you deserve, not just today, but every single day we're together. 
+                My goal is to grow with you, to learn from you, and to always strive to be the person 
+                  who can truly make your heart happy and feel cherished, now and forever.. 
+                </p>
+
+                <p class="signature">
+                    I love you from my soul to yours
+                    <br>
+                    - arty 
+                </p>
+            </div>
+        </section>
+
+        <!-- Second Letter Envelope -->
+        <section class="second-letter-section">
+
+            <p class="eyebrow">TEKA TEKAAAAA</p>
+            <h2>meron pa HAAHAHHAHEH</h2>
+            <p class="description">basta buksan mo na lang.</p>
+
+            <div class="envelope-wrapper">
+
+                <div class="letter-inside" id="secondLetter">
+                    <div class="second-letter-content">
+                        <p class="letter-heading">yieeee</p>
+                       
+                         <p>
+        <strong>I Love You Just Like How I Love The Ridleys</strong>
+    </p>
+
+    <p>
+        And even if life doesn't unfold the way we've imagined, even if our dreams take longer than expected, Be With You reminds me that <strong>it's okay if things don't happen right away.</strong>
+        <strong><u>Because in the end, my greatest dream isn't success or perfection - it's simply to be with you every single day. for the rest of our lives.</u></strong>
+    </p>
+
+    <p>
+        I think about the future the same way Someday does.
+        <em><u>I wanna be there when the sunlight hits your face. I want to witness your ordinary mornings, celebrate your victories, comfort you in your hardest days, and love you through every version of yourself.</u></em>
+        I want to be your closest friend, your biggest supporter, and someone who loves you through everything. Some things in this world may change, but I hope this never will.
+    </p>
+
+    <p>
+        Sometimes I wonder how someone could be so breathtaking.
+        Every time I look into your eyes, I understand <em>Aphrodite</em>.
+        <strong>I see the galaxies when I look in your eyes.</strong>
+        <em><u>You make words disappear, leaving me speechless in the most beautiful way. I could swear you're Aphrodite in disguise, because no one should be allowed to be this effortlessly wonderful.</u></em>
+    </p>
+                        
+
+                    </div>
+                </div>
+
+                <div class="animated-envelope" id="animatedEnvelope">
+                    <div class="envelope-back"></div>
+                    <div class="envelope-front"></div>
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-heart">♡</div>
+                </div>
+
+            </div>
+
+            <div class="envelope-wrapper">
+    <!-- Envelope elements here -->
+</div>
+
+        <button
+            class="envelope-button"
+              id="envelopeButton"
+             onclick="openSecondLetter()"
+             aria-expanded="false">
+             Open 
+        </button>
+
+        </section>
+
+        <!-- Ending -->
+        <footer>
+            <div class="footer-heart">♡</div>
+            <h2>Someday, and every day after.</h2>
+            <p>I'm glad it's you, geeee.</p>
+            <p class="footer-small">ehehehe</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
